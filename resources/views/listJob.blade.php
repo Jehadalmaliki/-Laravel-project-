@@ -69,13 +69,7 @@
                 </button></a
               >
             </li>
-            <li class="nav-item">
-              <a href="#"
-                ><button type="button" class="btn btn-warning">
-                  Sing up
-                </button></a
-              >
-            </li>
+           
           </ul>
         </div>
       </div>
@@ -89,8 +83,8 @@
           <option value="0">... </option>
       <option value="UI">Google </option>
       <option value="web"> Developer</option>
-    </select>     
-   
+    </select>
+
       </form>
     </div>
     <div class="container">
@@ -115,7 +109,7 @@
                     longer.
                   </p>
                   <p class="card-text">
-                    <small 
+                    <small
                       ><a href="decjop.html" class="text-muted"><svg xmlns="http://www.w3.org/2000/svg"  style="color: #20c997"
                       class="ml-5" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-down-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M6.364 2.5a.5.5 0 0 1 .5-.5H13.5A1.5 1.5 0 0 1 15 3.5v10a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 2 13.5V6.864a.5.5 0 1 1 1 0V13.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-10a.5.5 0 0 0-.5-.5H6.864a.5.5 0 0 1-.5-.5z"/>
@@ -131,7 +125,7 @@
           <div class="card mb-3" style="max-width: 1000px">
             <div class="row g-0">
               <div class="col-md-4">
-                
+
                   <img
                     src="image/lastjob2.png"
                     class="img-fluid rounded-start m-5 px-5"
@@ -147,7 +141,7 @@
                     longer.
                   </p>
                   <p class="card-text">
-                    <small 
+                    <small
                       ><a href="decjop.html" class="text-muted"><svg xmlns="http://www.w3.org/2000/svg"  style="color: #20c997"
                       class="ml-5" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-down-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M6.364 2.5a.5.5 0 0 1 .5-.5H13.5A1.5 1.5 0 0 1 15 3.5v10a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 2 13.5V6.864a.5.5 0 1 1 1 0V13.5a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5v-10a.5.5 0 0 0-.5-.5H6.864a.5.5 0 0 1-.5-.5z"/>
@@ -155,10 +149,10 @@
                       </svg>
                       More info</a>
                     </small>
-                 
-                    
+
+
                   </p>
-                  
+
                 </div>
               </div>
             </div>
@@ -166,7 +160,7 @@
         </div>
       </div>
     </div>
-   
+
     <!-- footer -->
     <footer
       class="text-center text-lg-start"
@@ -257,7 +251,7 @@
       <!-- Copyright -->
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-   
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/search.js"></script>
 
