@@ -42,25 +42,25 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="listJob.html">JOb</a>
+              <a class="nav-link text-light" href="/listJob">JOb</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="company.html">Company</a>
+              <a class="nav-link text-light" href="/company">Company</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="connect.html">Connect</a>
+              <a class="nav-link text-light" href="/connect">Connect</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="Aboutus.html">About Us</a>
+              <a class="nav-link text-light" href="/Aboutus">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="serveric.html">srevices</a>
+              <a class="nav-link text-light" href="/serveric">srevices</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="account.html">Account</a>
+              <a class="nav-link text-light" href="/account">Account</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="serveric.html">عربي</a>
+              <a class="nav-link text-light" href="/serveric">عربي</a>
             </li>
             <li class="nav-item">
               <a href="login.html"
@@ -69,7 +69,7 @@
                 </button></a
               >
             </li>
-           
+
           </ul>
         </div>
       </div>

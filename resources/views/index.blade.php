@@ -34,30 +34,30 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav d-flex">
             <li class="nav-item">
-              <a class="nav-link active text-dark" aria-current="page" href="index.html"
+              <a class="nav-link active text-dark" aria-current="page" href="/index"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="listJob.html">JOb</a>
+              <a class="nav-link text-light" href="/listJob">JOb</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="company.html">Company</a>
+              <a class="nav-link text-light" href="/company">Company</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" href="connect.html">Connect</a>
+                <a class="nav-link text-light" href="/connect">Connect</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="Aboutus.html">About Us</a>
+                <a class="nav-link text-light" href="/Aboutus">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="serveric.html">srevices</a>
+                <a class="nav-link text-light" href="/serveric">srevices</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="account.html">Account</a>
+                <a class="nav-link text-light" href="/account">Account</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="serveric.html">عربي</a>
+                <a class="nav-link text-light" href="/serveric">عربي</a>
               </li>
             <li class="nav-item">
               <a href="login.html"><button type="button" class="btn btn-outline-warning">
@@ -72,7 +72,7 @@
       </div>
     </nav>
     <!-- home -->
-  
+
      <div class="container  mt-3 h-50">
        <div class="row ">
          <div class="col-md-12 d-flex">
@@ -93,8 +93,8 @@
     <svg xmlns="http://www.w3.org/2000/svg" class="photo  " viewBox="0 0 1440 320"><path fill="#20c997" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,74.7C640,75,800,117,960,117.3C1120,117,1280,75,1360,53.3L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
 
    <!-- joblist -->
-   
-   
+
+
      <div class="container">
       <div class="row row-margin">
         <div class="col d-flex">
@@ -128,7 +128,7 @@
                     <path d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zm2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527z"/>
                   </svg>      Full Time  </small>
                 </p>
-                
+
               </div>
             </div>
           </div>
@@ -228,7 +228,7 @@
         <!--Grid column-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase"> Quiqe Links</h5>
-  
+
           <ul class="list-unstyled mb-0">
             <li>
               <a href="#!" class="text-dark">About us</a>
@@ -236,15 +236,15 @@
             <li>
               <a href="#!" class="text-dark">Job last</a>
             </li>
-           
+
           </ul>
         </div>
         <!--Grid column-->
-  
+
         <!--Grid column-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-0">Links</h5>
-  
+
           <ul class="list-unstyled">
             <li>
               <a href="#!" class="text-dark">Facebook</a>
@@ -261,11 +261,11 @@
           </ul>
         </div>
         <!--Grid column-->
-  
+
         <!--Grid column-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-0">Subscribe </h5>
-  
+
           <ul class="list-unstyled">
             <li>
               Sed consequat sapien faus quam bibendum convallis.
@@ -276,7 +276,7 @@
                 <path fill-rule="evenodd" d="M6.5 9.5 3 7.5v-6A1.5 1.5 0 0 1 4.5 0h7A1.5 1.5 0 0 1 13 1.5v6l-3.5 2L8 8.75l-1.5.75ZM1.059 3.635 2 3.133v3.753L0 5.713V5.4a2 2 0 0 1 1.059-1.765ZM16 5.713l-2 1.173V3.133l.941.502A2 2 0 0 1 16 5.4v.313Zm0 1.16-5.693 3.337L16 13.372v-6.5Zm-8 3.199 7.941 4.412A2 2 0 0 1 14 16H2a2 2 0 0 1-1.941-1.516L8 10.072Zm-8 3.3 5.693-3.162L0 6.873v6.5Z"/>
               </svg></button>
             </form>
-            
+
           </ul>
         </div>
         <!--Grid column-->
@@ -284,7 +284,7 @@
       <!--Grid row-->
     </div>
     <!-- Grid container -->
-  
+
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: #c9aa20;;">
       © 2022 Copyright:
@@ -295,4 +295,4 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
-</html> 
+</html>
