@@ -42,7 +42,21 @@
         <div class="row ">
             <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse shadow ">
               <!-- image profile -->
-
+              <div class=" col-12 d-flex justify-content-center align-items-center p-4 position-relative ">
+                <img src="image/face1.png" width="50%" class="img-fluid rounded-circle" alt="">
+                <a role="button" data-bs-toggle="modal" data-bs-target="#editImg" class="position-absolute bg-white
+                    border border-primary rounded d-flex justify-content-center align-items-lg-center rounded-circle"
+                    style="bottom: 10%;left: 35%; width: 30px;height: 30px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square " viewBox="0 0 16 16">
+                      <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                      <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="col-12 text-center mb-5">
+                <a class="fs-4 fw-bold" href="" style="color: #20c997 ;">Jehad Almaliki</a>
+                <p>Software Engineering</p>
+            </div>
 
                 <div class="position-sticky  " >
                     <ul class="nav flex-column shadow ">
@@ -66,43 +80,23 @@
                           </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('Course') }}">
+                              <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);"  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                              <span class="ml-2">Course</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ route('Social') }}">
+                              <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);"  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                              <span class="ml-2">Social media</span>
+                            </a>
+                          </li>
+                        <li class="nav-item">
                           <a class="nav-link" href="{{ route('User') }}">
                             <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
                             <span class="ml-2">user</span>
                           </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('role') }}">
-                              <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                              <span class="ml-2">role</span>
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="{{ route('service') }}">
-                              <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                              <span class="ml-2">Service</span>
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="{{  route('Company')  }}">
-                              <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                              <span class="ml-2">company</span>
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="{{ route('Advertisment')  }}">
-                              <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                              <span class="ml-2">Advertisment</span>
-                            </a>
-                          </li>
-
-                          <li class="nav-item">
-                            <a class="nav-link" href="{{ route('Job')  }}">
-                              <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                              <span class="ml-2">job</span>
-                            </a>
-                          </li>
-
 
 
 

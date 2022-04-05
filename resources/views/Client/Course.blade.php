@@ -1,16 +1,13 @@
-@extends('admin.master')
+@extends('Client.master')
   @section('content')
-
-
-
             <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
 
-                <h1 class="h2">Experince</h1>
+                <h1 class="h2">Course</h1>
 
                 <div class="row">
                     <div class="col-12 col-xl-8 mb-4 mb-lg-0">
                         <div class="card shadow ">
-                            <h5 class="card-header d-flex justify-content-between">Latest Update <button type="button" class="btn btn-sm " data-bs-toggle="modal" data-bs-target="#EditPersonal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                            <h5 class="card-header d-flex justify-content-between">Latest Update <button type="button" class="btn btn-sm " data-bs-toggle="modal" data-bs-target="#Course"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                               <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
                             </svg></button></h5>
                             <div class="card-body">
@@ -21,8 +18,7 @@
                                             <th scope="col">Name</th>
                                             <th scope="col">Year</th>
                                             <th scope="col">Company</th>
-                                            <th scope="col">Description</th>
-                                            <th scope="col">Date</th>
+                                            <th scope="col">Descrption</th>
                                             <th scope="col"></th>
                                             <th scope="col"></th>
 
@@ -30,12 +26,11 @@
                                         </thead>
                                         <tbody>
                                           <tr>
-                                            <th scope="row">Teaching</th>
-          <td>2019-2021</td>
-          <td>Taiz Unvirsity</td>
-          <td>Teach Student</td>
-          <td>Aug 31 1994</td>
-                                            <td><button type="button" class="btn btn-sm " style="color:rgb(41, 204, 155);" data-bs-toggle="modal" data-bs-target="#EditPersonal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square " viewBox="0 0 16 16">
+                                            <th scope="row">Draw</th>
+                                            <td>2021</td>
+                                            <td>Google</td>
+                                            <td>Learn how to dance</td>
+                                            <td><button type="button" class="btn btn-sm " style="color:rgb(41, 204, 155);" data-bs-toggle="modal" data-bs-target="#Course"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square " viewBox="0 0 16 16">
                                               <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                               <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                                             </svg></button></td>
@@ -104,12 +99,12 @@
             </div>
         </div>
     </div>
-     <!-- Modal Add Experince -->
-     <div class="modal fade" id="EditPersonal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <!-- Modal Add Education -->
+     <div class="modal fade" id="Course" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
           <div class="modal-content p-3">
               <div class="modal-header">
-                  <h4 class="modal-title fw-bold text-center" id="exampleModalLabel">Experince</h4>
+                  <h4 class="modal-title fw-bold text-center" id="exampleModalLabel">Course</h4>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -118,51 +113,26 @@
 
                       <div class="col-12">
                           <label for="Name" class="form-label">Name</label>
-                          <input type="text" class="form-control rounded-pill" id="university" placeholder="Jehad">
+                          <input type="text" class="form-control rounded-pill" id="university" placeholder="Drow">
                       </div>
                       <div class="col-12">
                           <label for="Year" class="form-label">Year</label>
                           <input type="text" class="form-control rounded-pill" id="Year" placeholder="Year">
                       </div>
                       <div class="col-12">
-                        <label for="job-location" class="form-label">Job location</label>
-                        <input type="text" class="form-control rounded-pill" id="job-location" placeholder="Choose location">
-                    </div>
-                    <div class="col-12">
-                        <label for="job-city" class="form-label">Choose city</label>
-                        <input type="text" class="form-control rounded-pill" id="job-city" placeholder="Citu">
-                    </div>
-                    <div class="col-12">
-                        <label for="start-date" class="form-label">Start Date</label>
-                        <input type="date" class="form-control rounded-pill" id="start-date" placeholder="start-date">
-                    </div>
-                    <div class="col-12">
-                        <label for="end-date" class="form-label">End Date</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                I still work here
-                            </label>
-                        </div>
-                        <input type="date" class="form-control rounded-pill" id="end-date" placeholder="end-date">
-                    </div>
-                    <div class="col-12">
+                          <label for="company" class="form-label">company</label>
+                          <input type="text" class="form-control rounded-pill" id="company" placeholder="company">
+                      </div>
+                      <div class="col-12">
                         <label for="description" class="form-label">Description</label>
                         <textarea name="" class="form-control rounded" id="description" cols="30" rows="10"></textarea>
                         <!-- <input type="text" class="form-control rounded-pill" id="description" placeholder="Description"> -->
                     </div>
-                    <!-- Company details -->
-                    <div class="col-12">
-                        <h3 class="fw-bold">Company details</h3>
-                    </div>
-                    <div class="col-12">
-                        <label for="company-name" class="form-label">Company Name</label>
-                        <input type="text" class="form-control rounded-pill" id="company-name" placeholder="Company name">
-                    </div>
-                    <div class="col-12">
-                        <label for="company-lndustry" class="form-label">Company lndustry</label>
-                        <input type="text" class="form-control rounded-pill" id="company-industry" placeholder="Company lndustry">
-                    </div>
+
+                      <div class="col-12">
+                          <label for="Date" class="form-label">Date</label>
+                          <input type="date" class="form-control" id="Date">
+                      </div>
                   </form>
               </div>
               <div class="modal-footer">
@@ -172,4 +142,5 @@
       </div>
   </div>
 
-   @stop
+@stop
+
