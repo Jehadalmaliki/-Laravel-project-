@@ -25,7 +25,7 @@
             </button>
         </div>
         <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0 ">
-           
+
             <div class="dropdown shadow ">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
                   Hello, Jehad Almaliki
@@ -37,26 +37,13 @@
               </div>
         </div>
     </nav>
-    
+
     <div class="container-fluid shadow " >
         <div class="row ">
             <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse shadow ">
               <!-- image profile -->
-              <div class=" col-12 d-flex justify-content-center align-items-center p-4 position-relative ">
-                <img src="image/face1.png" width="50%" class="img-fluid rounded-circle" alt="">
-                <a role="button" data-bs-toggle="modal" data-bs-target="#editImg" class="position-absolute bg-white
-                    border border-primary rounded d-flex justify-content-center align-items-lg-center rounded-circle" 
-                    style="bottom: 10%;left: 35%; width: 30px;height: 30px;">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square " viewBox="0 0 16 16">
-                      <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                      <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="col-12 text-center mb-5">
-                <a class="fs-4 fw-bold" href="" style="color: #20c997 ;">Jehad Almaliki</a>
-                <p>Software Engineering</p>
-            </div>
+
+
                 <div class="position-sticky  " >
                     <ul class="nav flex-column shadow ">
                         <li class="nav-item">
@@ -86,19 +73,46 @@
                         <li class="nav-item">
                           <a class="nav-link" href="Course.html">
                             <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                            <span class="ml-2">Course</span>
+                            <span class="ml-2">user</span>
                           </a>
                         </li>
-                       
-                       
-                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="Course.html">
+                              <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                              <span class="ml-2">role</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Course.html">
+                              <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                              <span class="ml-2">Service</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="Course.html">
+                              <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                              <span class="ml-2">company</span>
+                            </a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="Course.html">
+                              <svg xmlns="http://www.w3.org/2000/svg" style="color:rgb(41, 204, 155);" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                              <span class="ml-2">job</span>
+                            </a>
+                          </li>
+                     
+
+
+
+
                       </ul>
                 </div>
             </nav>
             <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
-               
+
                 <h1 class="h2">Course</h1>
-                  
+
                 <div class="row">
                     <div class="col-12 col-xl-8 mb-4 mb-lg-0">
                         <div class="card shadow ">
@@ -116,7 +130,7 @@
                                             <th scope="col">Descrption</th>
                                             <th scope="col"></th>
                                             <th scope="col"></th>
-                                            
+
                                           </tr>
                                         </thead>
                                         <tbody>
@@ -129,13 +143,13 @@
                                               <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                               <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                                             </svg></button></td>
-                                           
+
                                             <td><button type="button" class="btn btn-sm  " style="color:rgb(204, 41, 41);"data-bs-toggle="modal" data-bs-target="#delete"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                                               <path fill-rule="evenodd" d="M6.5 1a.5.5 0 0 0-.5.5v1h4v-1a.5.5 0 0 0-.5-.5h-3ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1H3.042l.846 10.58a1 1 0 0 0 .997.92h6.23a1 1 0 0 0 .997-.92l.846-10.58Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
                                             </svg></button></td>
                                           </tr>
-                                          
-                                       
+
+
                                         </tbody>
                                       </table>
                                 </div>
@@ -143,11 +157,11 @@
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
-               
-                
-           
+
+
+
         </div>
     </div>
   </main>
@@ -205,7 +219,7 @@
               <div class="modal-body">
                   <form class="row g-3 needs-validation" novalidate>
                       <!-- Education details -->
-                    
+
                       <div class="col-12">
                           <label for="Name" class="form-label">Name</label>
                           <input type="text" class="form-control rounded-pill" id="university" placeholder="Drow">
@@ -223,7 +237,7 @@
                         <textarea name="" class="form-control rounded" id="description" cols="30" rows="10"></textarea>
                         <!-- <input type="text" class="form-control rounded-pill" id="description" placeholder="Description"> -->
                     </div>
-          
+
                       <div class="col-12">
                           <label for="Date" class="form-label">Date</label>
                           <input type="date" class="form-control" id="Date">

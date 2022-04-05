@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,15 +12,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link href="css/profile.css" rel="stylesheet" />
-    <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-	</script>
   </head>
-  
   <body>
     <nav
       class="navbar navbar-expand-lg navbar-light fixed-top"
@@ -40,30 +36,30 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav d-flex">
             <li class="nav-item">
-              <a class="nav-link active text-dark" aria-current="page" href="index.html"
+              <a class="nav-link active text-dark" aria-current="page" href="/"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="listJob.html">JOb</a>
+              <a class="nav-link text-light" href="/listJob">JOb</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="company.html">Company</a>
+              <a class="nav-link text-light" href="/company">Company</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" href="connect.html">Connect</a>
+                <a class="nav-link text-light" href="/connect">Connect</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="Aboutus.html">About Us</a>
+                <a class="nav-link text-light" href="/Aboutus">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="serveric.html">srevices</a>
+                <a class="nav-link text-light" href="/serveric">srevices</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="account.html">Account</a>
+                <a class="nav-link text-light" href="/account">Account</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="serveric.html">عربي</a>
+                <a class="nav-link text-light" href="/serveric">عربي</a>
               </li>
             <li class="nav-item">
               <a href="login.html"><button type="button" class="btn btn-outline-warning">
@@ -77,77 +73,16 @@
         </div>
       </div>
     </nav>
-    <div class="container">
-        <div class="main-body">
-        
-             
-        
-              <div class="row gutters-sm shadow">
-                <div class="col-md-4 mb-1">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="d-flex flex-column align-items-center text-center">
-                        <img src="image/face1.png" alt="Admin" class="rounded-circle" width="100">
-                        <div class="mt-1">
-                          <h4>Jehad Almaliki</h4>
-                          <p class="text-secondary mb-1">Software Engineering</p>
-                          <p class="text-muted font-size-sm">Taiz, Yemen</p>
-                          <a  href="profile.html" class="btn btn-outline-success">Show</a>
-                          <a href="connect.html"><button type="button" class="btn " style="background-color: #ffd61e;">Massege</button></a>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                  
-                  </div>
-             
-                <div class="col-md-4 mb-1">
-                  <div class="card">
-                    <div class="card-body">
-                      <div class="d-flex flex-column align-items-center text-center">
-                        <img src="image/face3.png" alt="Admin" class="rounded-circle" width="100">
-                        <div class="mt-1">
-                          <h4>Nora</h4>
-                          <p class="text-secondary mb-1"> Engineering</p>
-                          <p class="text-muted font-size-sm">Taiz, Yemen</p>
-                          <a  href="profile.html" class="btn btn-outline-success">Show</a>
-                          <a href="connect.html"><button type="button" class="btn " style="background-color: #ffd61e;">Massege</button></a>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                  
-                  </div>
-                  <div class="col-md-4 mb-1 shadow">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="d-flex flex-column align-items-center text-center">
-                          <img src="image/face2.png" alt="Admin" class="rounded-circle" width="100">
-                          <div class="mt-1">
-                            <h4>Mohammed Almaliki</h4>
-                            <p class="text-secondary mb-1">Software Engineering</p>
-                            <p class="text-muted font-size-sm">Taiz, Yemen</p>
-                            <a  href="profile.html" class="btn btn-outline-success">Show</a>
-                            <a href="connect.html"><button type="button" class="btn " style="background-color: #ffd61e;">Massege</button></a>
-                          </div>
-                        </div>
-                        
-                      </div>
-                      
-                    </div>
-                    
-                    </div>
-              </div>
-                 
-            </div>
-        </div>
+
+    @yield('content')
 
 
-      <!-- footer -->
+
+
+
+
+
+    <!-- footer -->
    <footer class=" text-center text-lg-start" style="background-color: #20c997;; border-start-end-radius: 70%;">
     <!-- Grid container -->
     <div class="container p-4">
@@ -156,7 +91,7 @@
         <!--Grid column-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase"> Quiqe Links</h5>
-  
+
           <ul class="list-unstyled mb-0">
             <li>
               <a href="#!" class="text-dark">About us</a>
@@ -164,15 +99,15 @@
             <li>
               <a href="#!" class="text-dark">Job last</a>
             </li>
-           
+
           </ul>
         </div>
         <!--Grid column-->
-  
+
         <!--Grid column-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-0">Links</h5>
-  
+
           <ul class="list-unstyled">
             <li>
               <a href="#!" class="text-dark">Facebook</a>
@@ -189,11 +124,11 @@
           </ul>
         </div>
         <!--Grid column-->
-  
+
         <!--Grid column-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <h5 class="text-uppercase mb-0">Subscribe </h5>
-  
+
           <ul class="list-unstyled">
             <li>
               Sed consequat sapien faus quam bibendum convallis.
@@ -204,7 +139,7 @@
                 <path fill-rule="evenodd" d="M6.5 9.5 3 7.5v-6A1.5 1.5 0 0 1 4.5 0h7A1.5 1.5 0 0 1 13 1.5v6l-3.5 2L8 8.75l-1.5.75ZM1.059 3.635 2 3.133v3.753L0 5.713V5.4a2 2 0 0 1 1.059-1.765ZM16 5.713l-2 1.173V3.133l.941.502A2 2 0 0 1 16 5.4v.313Zm0 1.16-5.693 3.337L16 13.372v-6.5Zm-8 3.199 7.941 4.412A2 2 0 0 1 14 16H2a2 2 0 0 1-1.941-1.516L8 10.072Zm-8 3.3 5.693-3.162L0 6.873v6.5Z"/>
               </svg></button>
             </form>
-            
+
           </ul>
         </div>
         <!--Grid column-->
@@ -212,7 +147,7 @@
       <!--Grid row-->
     </div>
     <!-- Grid container -->
-  
+
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: #c9aa20;;">
       © 2022 Copyright:
@@ -220,16 +155,8 @@
     </div>
     <!-- Copyright -->
   </footer>
-  <script>
-		$(document).ready(function () {
-			$("#link").click(function (e) {
-				e.preventDefault();
-				
-				window.location.href
-					= "image/p.png";
-			});
-		});
-	</script>
+
     <script src="js/bootstrap.bundle.min.js"></script>
   </body>
-</html> 
+</html>
+

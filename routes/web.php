@@ -14,22 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout/index');
 });
-Route::get('/index', function () {
-    return view('index');
+Route::get('/master', function () {
+    return view('layout/master');
 });
 Route::get('/Skill', function () {
     return view('Skill');
 });
 Route::get('/profile', function () {
-    return view('profile');
+    return view('layout/profile');
 });
 Route::get('/login', function () {
-    return view('login');
+    return view('layout/login');
 });
 Route::get('/listJob', function () {
-    return view('listJob');
+    return view('layout/listJob');
 });
 Route::get('/Experince', function () {
     return view('Experince');
@@ -38,7 +38,7 @@ Route::get('/Eduction', function () {
     return view('Eduction');
 });
 Route::get('/decjop', function () {
-    return view('decjop');
+    return view('layout/decjop');
 });
 Route::get('/dashboardPro', function () {
     return view('dashboardPro');
@@ -47,15 +47,15 @@ Route::get('/Course', function () {
     return view('Course');
 });
 Route::get('/connect', function () {
-    return view('connect');
+    return view('layout/connect');
 });
 Route::get('/company', function () {
-    return view('company');
+    return view('layout/company');
 });
 Route::get('/account', function () {
-    return view('account');
+    return view('layout/account');
 });
 Route::get('/Aboutus', function () {
-    return view('Aboutus');
+    return view('layout/Aboutus');
 });
 

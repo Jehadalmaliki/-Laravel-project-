@@ -1,74 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Job</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light fixed-top"
-      style="background-color: #20c997"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand active text-light" href="#"><h3>Wazeef</h3> </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav d-flex">
-            <li class="nav-item">
-              <a class="nav-link active text-dark" aria-current="page" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="listJob.html">JOb</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="company.html">Company</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="connect.html">Connect</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="Aboutus.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="serveric.html">srevices</a>
-              </li>
-            <li class="nav-item">
-              <a href="login.html"><button type="button" class="btn btn-outline-warning">
-                log in
-              </button></a>
-            </li>
-            <li class="nav-item">
-              <a href="#"><button type="button" class="btn btn-warning">Sing up</button></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+@extends('layout.master')
+@section('content')
 <!-- JOb Description -->
 <div class="container mt-3 ">
     <h1 class="text-center text-info"> JOb Description</h1>
-   <img scr="image/" >      
+   <img scr="image/" >
     <div class="row-cols-12 bg-dark ">
         <div class=" col-lg-12 col-md-1 bg-light d-flex">
             <div class="heading w-25">Job title</div>
@@ -134,7 +69,7 @@
                 Divide and analyze products according to customer needs while defining the appropriate sales methods for each
                 Responsible for completing the sales process by fulfilling the minimum required documents and directing the customer to a specific branch within the regional area after coordination with this branch
                 Completion and completion of all documents and papers necessary to complete the banking service or sales process, and follow up with the executing branch to ensure the completion of the procedures
-                Building and consolidating good relationships with customers, expanding the customer base, and providing after-sales service to ensure customer satisfaction</li> 
+                Building and consolidating good relationships with customers, expanding the customer base, and providing after-sales service to ensure customer satisfaction</li>
 
             </div>
         </div>
@@ -152,98 +87,23 @@
                 <form class="d-flex">
                     <button class="btn btn-outline-success" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-plus-fill" viewBox="0 0 16 16">
                         <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm.5 4v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z"/>
-                      </svg> Download</button> 
-                      
+                      </svg> Download</button>
+
                 </form>
                   <p class="card-text">
                     <small class="text-muted"><svg style =" color: #20c997" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                       </svg> Add to your Favorite
-                   
+
                   </p>
 
             </div>
         </div>
     </div>
-    
-</div> 
+
+</div>
 
   </div>
  <!-- footer -->
- <footer class=" text-center text-lg-start" style="background-color: #20c997;; border-start-end-radius: 70%;">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase"> Quiqe Links</h5>
-  
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-dark">About us</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Job last</a>
-            </li>
-           
-          </ul>
-        </div>
-        <!--Grid column-->
-  
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-0">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!" class="text-dark">Facebook</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Instgram</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">linked IN</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Twiter</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-  
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-0">Subscribe </h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              Sed consequat sapien faus quam bibendum convallis.
-            </li>
-            <form class="d-flex">
-              <input class="form-control me-2 w-50" type="search" placeholder="Email.." aria-label="Search">
-              <button class="btn btn-outline-warning " type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-paper-fill" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M6.5 9.5 3 7.5v-6A1.5 1.5 0 0 1 4.5 0h7A1.5 1.5 0 0 1 13 1.5v6l-3.5 2L8 8.75l-1.5.75ZM1.059 3.635 2 3.133v3.753L0 5.713V5.4a2 2 0 0 1 1.059-1.765ZM16 5.713l-2 1.173V3.133l.941.502A2 2 0 0 1 16 5.4v.313Zm0 1.16-5.693 3.337L16 13.372v-6.5Zm-8 3.199 7.941 4.412A2 2 0 0 1 14 16H2a2 2 0 0 1-1.941-1.516L8 10.072Zm-8 3.3 5.693-3.162L0 6.873v6.5Z"/>
-              </svg></button>
-            </form>
-            
-          </ul>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: #c9aa20;;">
-      © 2022 Copyright:
-      <a class="text-dark" >Jehad Almaliki</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-  </body>
-</html> 
+ @stop
