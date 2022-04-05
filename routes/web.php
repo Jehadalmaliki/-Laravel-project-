@@ -2,6 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\admin\CourseController;
+use App\Http\Controllers\admin\AdvertismentController;
+use App\Http\Controllers\admin\CompanyController;
+use App\Http\Controllers\admin\EductionController;
+use App\Http\Controllers\admin\ExperinceController;
+use App\Http\Controllers\admin\JobController;
+use App\Http\Controllers\admin\roleController;
+use App\Http\Controllers\admin\serviceController;
+use App\Http\Controllers\admin\UserController;
+use App\Http\Controllers\admin\SkillController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +30,7 @@ Route::get('/', function () {
 Route::get('/master', function () {
     return view('layout/master');
 });
-Route::get('/Skill', function () {
-    return view('Skill');
-});
+
 Route::get('/profile', function () {
     return view('layout/profile');
 });
@@ -31,21 +40,13 @@ Route::get('/login', function () {
 Route::get('/listJob', function () {
     return view('layout/listJob');
 });
-Route::get('/Experince', function () {
-    return view('Experince');
-});
-Route::get('/Eduction', function () {
-    return view('Eduction');
-});
+
+
 Route::get('/decjop', function () {
     return view('layout/decjop');
 });
-Route::get('/dashboardPro', function () {
-    return view('dashboardPro');
-});
-Route::get('/Course', function () {
-    return view('Course');
-});
+
+
 Route::get('/connect', function () {
     return view('layout/connect');
 });
@@ -59,3 +60,14 @@ Route::get('/Aboutus', function () {
     return view('layout/Aboutus');
 });
 
+Route::get('/Course', [CourseController::class, 'show'])->name('Course');
+Route::get('/Advertisment', [AdvertismentController::class, 'show'])->name('Advertisment');
+Route::get('/Company', [CompanyController::class, 'show'])->name('Company');
+
+Route::get('/Eduction', [EductionController::class, 'show'])->name('Eduction');
+Route::get('/Experince', [ExperinceController::class, 'show'])->name('Experince');
+Route::get('/Job', [JobController::class, 'show'])->name('Job');
+Route::get('/role', [roleController::class, 'show'])->name('role');
+Route::get('/service', [serviceController::class, 'show'])->name('service');
+Route::get('/User', [UserController::class, 'show'])->name('User');
+Route::get('/Skill', [SkillController::class, 'show'])->name('Skill');
