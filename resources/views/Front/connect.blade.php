@@ -1,5 +1,5 @@
 
-@extends('layout.master')
+ @extends('Front.layout.master')
 @section('content')
     <!-- Connect us -->
     <div class="container-fluid my-5">

@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('Front.layout.master')
 @section('content')
     <!-- login -->
     <section class="my-5">

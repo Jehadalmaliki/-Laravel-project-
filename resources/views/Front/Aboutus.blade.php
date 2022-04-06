@@ -14,7 +14,7 @@
 
         }}
     </style>
-  @extends('layout.master')
+  @extends('Front.layout.master')
   @section('content')
 
     <!-- About Us -->

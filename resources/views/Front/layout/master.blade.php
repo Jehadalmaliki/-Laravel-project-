@@ -53,7 +53,7 @@
                 <a class="nav-link text-light" href="/Aboutus">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="/serveric">srevices</a>
+                <a class="nav-link text-light" href="/service">srevices</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light" href="/account">Account</a>

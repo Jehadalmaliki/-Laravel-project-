@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('Front.layout.master')
 @section('content')
     <!-- our companies -->
     <div class="container-fluid my-5">

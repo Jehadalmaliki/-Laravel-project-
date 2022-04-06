@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('Front.layout.master')
 @section('content')
 {{-- home --}}
      <div class="container  mt-3 h-50">

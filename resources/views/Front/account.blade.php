@@ -1,6 +1,6 @@
 
 
- @extends('layout.master')
+ @extends('Front.layout.master')
  @section('content')
     <div class="container">
         <div class="main-body">
