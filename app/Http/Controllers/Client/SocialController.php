@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class serviceController extends Controller
+class SocialController extends Controller
 {
     //
     public function show()
     {
-        return view('admin.service');
+        return view('Client.Social');
     }
 }
