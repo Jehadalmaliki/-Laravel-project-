@@ -15,13 +15,31 @@
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
 <h5 class="card-header">Add new Job details</h5>
-<form class="card-body" action="/save_job" method="POST" enctype="multipart/form-data">
+@if ($errors->any())
+@foreach ($errors->all() as $err)
+<p class="alert alert-danger">{{ $err }}</p>
 
+@endforeach
+
+@endif
+<form class="card-body" action="{{ route('save_job') }}" method="POST" enctype="multipart/form-data">
+    @csrf
 <div class="row g-3">
   <div class="col-md-6">
     <label class="form-label" for="multicol-username"> Job title</label>
-    <input name="job_name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+    <input name="name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
+  <label for="multiple" class="control-label col-md-3">Company</label>
+    <div class="col-md-6">
+        <select id="multiple"name="company_id" class="form-control select2-multiple" multiple>
+            <option value=""></option>
+            @foreach($company as $host)
+            <option value="{{$host->id}}">{{$host->name}} </option>
+            @endforeach
+
+        </select>
+    </div>
+</div>
   <div class="col-md-6">
     <label class="form-label" for="multicol-email"> Photo</label>
     <div class="input-group input-group-merge">
@@ -32,40 +50,37 @@
   <div class="col-md-6">
     <label class="form-label" for="multicol-username">Career Level
     </label>
-    <input name="category_name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+    <input name="caree_level" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
-  <div class="col-md-6">
-    <label class="form-label" for="multicol-username"> Job title</label>
-    <input name="category_name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
-  </div>
+
   <div class="col-md-6">
     <label class="form-label" for="multicol-username"> Governorate </label>
-    <input name="category_name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+    <input name="governement" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
   <div class="col-md-6">
     <label class="form-label" for="multicol-username"> sector</label>
-    <input name="category_name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+    <input name="sector" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
   <div class="col-md-6">
     <label class="form-label" for="multicol-username"> Job description</label>
-    <input name="category_name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+    <input name="description" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
   <div class="col-md-6">
     <label class="form-label" for="multicol-username"> responsibilities</label>
-    <input name="category_name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+    <input name="responsblite" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
   <div class="col-md-6">
     <label class="form-label" for="multicol-username"> Start Date</label>
-    <input name="category_name" type="date" id="multicol-username" class="form-control" placeholder="john.doe" />
+    <input name="start_date" type="date" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
   <div class="col-md-6">
     <label class="form-label" for="multicol-username">Expiry date</label>
-    <input name="category_name" type="date" id="multicol-username" class="form-control" placeholder="john.doe" />
+    <input name="expirt_date" type="date" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
   <div class="col-md-6">
     <label class="form-label" for="multicol-username">Job Deatiales Info
     </label>
-    <input name="category_name" type="file" id="multicol-username" class="form-control" placeholder="john.doe" />
+    <input name="file" type="file" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
   <div class="col-md-6">
     <div class="form-password-toggle">

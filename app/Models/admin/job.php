@@ -18,4 +18,15 @@ class job extends Model
 	protected $fillable = [
 		'name', 'caree_level','governement', 'start_date','expirt_date','description','responsblite','sector','image','file',
 	];
+  /**
+    * Get the company that owns the job
+    *
+    * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+    */
+   public function company(): BelongsTo
+   {
+       return $this->belongsTo(company::class, 'foreign_key', 'company_id');
+   }
+   
+
 }
