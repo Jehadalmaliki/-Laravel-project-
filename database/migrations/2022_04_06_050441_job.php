@@ -23,7 +23,9 @@ return new class extends Migration
             $table->string('expirt_date');
             $table->string('description');
             $table->string('responsblite');
-           
+            $table->unsignedBigInteger('company_id');
+            $table->foreign('company_id')
+            ->references('id')->on('company')->onDelete('cascade');
             $table->string('sector');
             $table->string('image')->default('person.png');
             $table->string('file');
@@ -40,5 +42,6 @@ return new class extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('job');
     }
 };
