@@ -72,14 +72,16 @@ Route::get('/Eduction', [EductionController::class, 'show'])->name('Eduction');
 Route::get('/Experince', [ExperinceController::class, 'show'])->name('Experince');
 
 Route::get('/User', [UserController::class, 'show'])->name('User');
-// Route::get('/singupshow', [UserController::class, 'singupshow'])->name('singupshow');
 Route::post('/save_user',[UserController::class,'register'])->name('save_user');
 
 Route::get('/Skill', [SkillController::class, 'show'])->name('Skill');
 Route::get('/Social', [SocialController::class, 'show'])->name('Social');
 // admin routing
 Route::get('admin/Job', [jobController::class, 'show'])->name('Job');
+//company Routing
 Route::get('admincompany', [companyController::class, 'show'])->name('admincompany');
+Route::post('/save_company',[companyController::class,'insert'])->name('save_company');
+
 Route::get('adminaboutus', [aboutusController::class, 'show'])->name('adminaboutus');
 Route::get('adminaconnectus', [connectusController::class, 'show'])->name('adminaconnect');
 Route::get('adminaservice', [serviceController::class, 'show'])->name('adminaservice');
