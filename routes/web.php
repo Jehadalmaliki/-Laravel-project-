@@ -62,16 +62,23 @@ Route::get('/account', function () {
 Route::get('/Aboutus', function () {
     return view('Front/Aboutus');
 });
+Route::get('/singup', function () {
+    return view('Front/singup');
+});
 
 //client routing
 Route::get('/Course', [CourseController::class, 'show'])->name('Course');
 Route::get('/Eduction', [EductionController::class, 'show'])->name('Eduction');
 Route::get('/Experince', [ExperinceController::class, 'show'])->name('Experince');
+
 Route::get('/User', [UserController::class, 'show'])->name('User');
+// Route::get('/singupshow', [UserController::class, 'singupshow'])->name('singupshow');
+Route::post('/save_user',[UserController::class,'register'])->name('save_user');
+
 Route::get('/Skill', [SkillController::class, 'show'])->name('Skill');
 Route::get('/Social', [SocialController::class, 'show'])->name('Social');
 // admin routing
-Route::get('Job', [jobController::class, 'show'])->name('Job');
+Route::get('admin/Job', [jobController::class, 'show'])->name('Job');
 Route::get('admincompany', [companyController::class, 'show'])->name('admincompany');
 Route::get('adminaboutus', [aboutusController::class, 'show'])->name('adminaboutus');
 Route::get('adminaconnectus', [connectusController::class, 'show'])->name('adminaconnect');
