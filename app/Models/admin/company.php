@@ -18,4 +18,13 @@ class company extends Model
 	protected $fillable = [
 		'name', 'description','image', 'email',
 	];
+    /**
+     * Get all of the job for the company
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function job(): HasMany
+    {
+        return $this->hasMany(job::class);
+    }
 }

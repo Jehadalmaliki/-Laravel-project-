@@ -77,7 +77,8 @@ Route::post('/save_user',[UserController::class,'register'])->name('save_user');
 Route::get('/Skill', [SkillController::class, 'show'])->name('Skill');
 Route::get('/Social', [SocialController::class, 'show'])->name('Social');
 // admin routing
-Route::get('admin/Job', [jobController::class, 'show'])->name('Job');
+Route::get('adminJob', [jobController::class, 'show'])->name('Job');
+Route::post('/save_job', [jobController::class, 'insert'])->name('save_job');
 //company Routing
 Route::get('admincompany', [companyController::class, 'show'])->name('admincompany');
 Route::post('/save_company',[companyController::class,'insert'])->name('save_company');
