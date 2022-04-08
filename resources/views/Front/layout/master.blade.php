@@ -62,12 +62,12 @@
                 <a class="nav-link text-light" href="/serveric">عربي</a>
               </li>
             <li class="nav-item">
-              <a href="login.html"><button type="button" class="btn btn-outline-warning">
+              <a href="/login"><button type="button" class="btn btn-outline-warning">
                 log in
               </button></a>
             </li>
             <li class="nav-item">
-              <a href="#"><button type="button" class="btn btn-warning">Sing up</button></a>
+              <a href="/singup"><button type="button" class="btn btn-warning">Sing up</button></a>
             </li>
           </ul>
         </div>
