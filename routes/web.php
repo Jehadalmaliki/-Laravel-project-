@@ -90,4 +90,5 @@ Route::get('adminaconnectus', [connectusController::class, 'show'])->name('admin
 Route::post('/save_connectus', [connectusController::class, 'insert'])->name('save');
 
 Route::get('adminaservice', [serviceController::class, 'show'])->name('adminaservice');
+Route::post('save_service', [serviceController::class, 'insert'])->name('save_service');
 
