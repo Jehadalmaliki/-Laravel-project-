@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 use App\Http\Controllers\Client\CourseController;
 use App\Http\Controllers\Client\EductionController;
@@ -65,7 +66,13 @@ Route::get('/Aboutus', function () {
 Route::get('/singup', function () {
     return view('Front/singup');
 });
-
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){
+        
+    });
 //client routing
 Route::get('/Course', [CourseController::class, 'show'])->name('Course');
 Route::get('/Eduction', [EductionController::class, 'show'])->name('Eduction');
@@ -77,8 +84,7 @@ Route::post('/save_user',[UserController::class,'register'])->name('save_user');
 Route::get('/Skill', [SkillController::class, 'show'])->name('Skill');
 Route::get('/Social', [SocialController::class, 'show'])->name('Social');
 // admin routing
-Route::get('/adminJob', [jobController::class, 'show'])->name('Job');
-Route::post('/save_job', [jobController::class, 'insert'])->name('save_job');
+
 //company Routing
 Route::get('/admincompany', [companyController::class, 'show'])->name('admincompany');
 Route::post('/save_company',[companyController::class,'insert'])->name('save_company');
@@ -90,4 +96,5 @@ Route::get('adminaconnectus', [connectusController::class, 'show'])->name('admin
 Route::post('/save_connectus', [connectusController::class, 'insert'])->name('save');
 
 Route::get('adminaservice', [serviceController::class, 'show'])->name('adminaservice');
+Route::post('save_service', [serviceController::class, 'insert'])->name('save_service');
 
