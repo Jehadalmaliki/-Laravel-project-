@@ -15,6 +15,7 @@ use App\Http\Controllers\admin\companyController;
 use App\Http\Controllers\admin\aboutusController;
 use App\Http\Controllers\admin\connectusController;
 use App\Http\Controllers\admin\serviceController;
+use App\Http\Controllers\admin\settingscontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,7 +72,7 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
-        
+
     });
 //client routing
 Route::get('/Course', [CourseController::class, 'show'])->name('Course');
@@ -97,4 +98,6 @@ Route::post('/save_connectus', [connectusController::class, 'insert'])->name('sa
 
 Route::get('adminaservice', [serviceController::class, 'show'])->name('adminaservice');
 Route::post('save_service', [serviceController::class, 'insert'])->name('save_service');
+
+Route::get('/generate_role', [settingscontroller::class, 'generateRules'])->name('generate_role');
 
