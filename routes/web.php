@@ -77,13 +77,17 @@ Route::post('/save_user',[UserController::class,'register'])->name('save_user');
 Route::get('/Skill', [SkillController::class, 'show'])->name('Skill');
 Route::get('/Social', [SocialController::class, 'show'])->name('Social');
 // admin routing
-Route::get('adminJob', [jobController::class, 'show'])->name('Job');
+Route::get('/adminJob', [jobController::class, 'show'])->name('Job');
 Route::post('/save_job', [jobController::class, 'insert'])->name('save_job');
 //company Routing
-Route::get('admincompany', [companyController::class, 'show'])->name('admincompany');
+Route::get('/admincompany', [companyController::class, 'show'])->name('admincompany');
 Route::post('/save_company',[companyController::class,'insert'])->name('save_company');
 
 Route::get('adminaboutus', [aboutusController::class, 'show'])->name('adminaboutus');
+Route::post('/save_aboutus', [aboutusController::class, 'insert'])->name('save_aboutus');
+
 Route::get('adminaconnectus', [connectusController::class, 'show'])->name('adminaconnect');
+Route::post('/save_connectus', [connectusController::class, 'insert'])->name('save');
+
 Route::get('adminaservice', [serviceController::class, 'show'])->name('adminaservice');
 
