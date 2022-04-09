@@ -15,12 +15,19 @@
 <!-- Multi Column with Form Separator -->
 <div class="card mb-4">
 <h5 class="card-header">Add About us details</h5>
-<form class="card-body" action="/save_Aboutus" method="POST" enctype="multipart/form-data">
+@if ($errors->any())
+@foreach ($errors->all() as $err)
+<p class="alert alert-danger">{{ $err }}</p>
 
+@endforeach
+
+@endif
+<form class="card-body" action="{{ route('save_aboutus') }}" method="POST" enctype="multipart/form-data">
+    @csrf
 <div class="row g-3">
   <div class="col-md-6">
     <label class="form-label" for="multicol-username"> Aboutus title</label>
-    <input name="Aboutus_name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+    <input name="title" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
   <div class="col-md-6">
     <label class="form-label" for="multicol-email"> Photo</label>
@@ -32,7 +39,7 @@
 
   <div class="col-md-6">
     <label class="form-label" for="multicol-username"> Aboutus description</label>
-    <input name="Aboutus_description" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
+    <input name="description" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
 
   <div class="col-md-6">

@@ -12,13 +12,23 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
+                @if ($errors->any())
+                @foreach ($errors->all() as $err)
+                <p class="alert alert-danger">{{ $err }}</p>
+
+            @endforeach
+
+             @endif
               <div class="mb-3">
+                <form class="card-body" action="{{ route('save') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
                 <label for="exampleFormControlInput1" class="form-label"
                   >Email address</label
                 >
                 <input
                   type="email"
                   class="form-control"
+                  name="email"
                   id="exampleFormControlInput1"
                   placeholder="name@example.com"
                 />
@@ -29,13 +39,15 @@
                 >
                 <textarea
                   class="form-control"
+                  name="message"
                   id="exampleFormControlTextarea1"
                   rows="3"
                 ></textarea>
               </div>
               <div class="mb-3">
-                <button class="btn btn-outline-success">Submit</button>
+                <button type="submit" class="btn btn-outline-success">Submit</button>
               </div>
+            </form>
             </div>
           </div>
         </div>
