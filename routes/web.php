@@ -71,8 +71,7 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){
-        Route::get('/adminJob', [jobController::class, 'show'])->name('Job');
-        Route::post('/save_job', [jobController::class, 'insert'])->name('save_job');
+        
     });
 //client routing
 Route::get('/Course', [CourseController::class, 'show'])->name('Course');
