@@ -2,6 +2,7 @@
 
 return
 [
-'job'=>'job'
+'job'=>'job',
+'title'=>'Job Tilte '
 ];
 ?>
