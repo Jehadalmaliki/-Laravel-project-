@@ -42,9 +42,13 @@ class UserController extends Controller
         $u->name=$request->name;
         $u->password=Hash::make($request->password);
         $u->email=$request->email;
-        if($u->save())
-        return redirect()->route('User')
-        ->with(['success'=>'user created successful']);
+
+        if($u->save()){
+            $u->attachRole('admin');
+            return redirect()->route('User')
+            ->with(['success'=>'user created successful']);
+        }
+
         return back()->with(['error'=>'can not create user']);
 
     }
@@ -63,5 +67,16 @@ class UserController extends Controller
         $u=new User();
         $u->name=$request->input('email');
         $u->save();
+        }
+        
+        public function editUser(){
+            $u=User::find(5);
+            if($u->hasRole('admin'))
+            {
+
+            }
+            else {
+
+            }
         }
 }
