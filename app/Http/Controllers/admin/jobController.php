@@ -12,7 +12,7 @@ class jobController extends Controller
 {
     //
     public function show()
-    {$company = DB::select('select * from company');
+    {$company = company::all();
         return view('admin.Job',['company'=>$company]);
     }
     public function master()
