@@ -57,7 +57,7 @@ class UserController extends Controller
 
     }
     public function showLogin(){
-        if(Auth::check())
+        if(Auth::check())//redirect user to dashboard if he change the router to login and he still in dashboard
         return redirect()->route($this->checkRole());
         else
         return view('Front.login');
@@ -84,7 +84,7 @@ class UserController extends Controller
         if(Auth::attempt(['email'=>$request->email,'password'=>$request->password,'is_active'=>1])){
 
 
-            if(Auth::user()->hasRole('admin'))
+            if(Auth::user()->hasRole('admin'))//if he login and has admin role and he is active=1 redirct him to dashboard route
             return redirect()->route('dashboard');
             else
             return redirect()->route('Course');
