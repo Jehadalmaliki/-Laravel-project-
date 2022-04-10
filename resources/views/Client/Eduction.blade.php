@@ -103,7 +103,8 @@
         </div>
     </div>
 
-     <!-- Modal Add Education -->
+      <!-- Modal Add Experince -->
+
     <div class="modal fade" id="addEducation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
             <div class="modal-content p-3">
@@ -133,15 +134,15 @@
                             </select>
                         </div>
                         <div class="col-12">
-                            <label for="university" class="form-label">Fild of study (Major)</label>
+                            <label for="university" class="form-label">Fild of STUDY</label>
                             <input type="text" name="name" class="form-control rounded-pill" id="university" placeholder="Ex. software engineering">
                         </div>
                         <div class="col-12">
-                            <label for="university" class="form-label">University or institution</label>
+                            <label for="university" class="form-label">University</label>
                             <input type="text" name="University" class="form-control rounded-pill" id="university" placeholder="Ex. Harvad University">
                         </div>
                         <div class="col-12">
-                            <label for="country" class="form-label">Grade</label>
+                            <label for="country" class="form-label">How many Years</label>
                             <input type="text" name="Year" class="form-control rounded-pill" id="country" placeholder="Country">
                         </div>
 
@@ -165,5 +166,6 @@
             </div>
         </div>
     </div>
+
 
    @stop

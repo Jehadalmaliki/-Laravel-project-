@@ -11,13 +11,26 @@
             <img src="image/login.svg" class="img-fluid" alt="Phone image" />
           </div>
           <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-            <form>
+            @if(session()->has('message')){
+                <p class="alert alert-danger">{{ session()->get('message') }}</p>
+              }
+              @endif
+              @if ($errors->any())
+                @foreach ($errors->all() as $err)
+                <p class="alert alert-danger">{{ $err }}</p>
+
+                @endforeach
+
+                @endif
+            <form  action="{{ route('do_login') }}" method="POST" enctype="multipart/form-data">
               <!-- Email input -->
+              @csrf
               <div class="form-outline mb-4">
                 <input
                   type="email"
                   id="form1Example13"
                   class="form-control form-control-lg"
+                  name="email"
                 />
                 <label class="form-label" for="form1Example13"
                   >Email address</label
@@ -30,6 +43,7 @@
                   type="password"
                   id="form1Example23"
                   class="form-control form-control-lg"
+                  name="password"
                 />
                 <label class="form-label" for="form1Example23">Password</label>
               </div>
@@ -54,12 +68,7 @@
               </div>
 
               <!-- Submit button -->
-              <a
-                href="profile.html"
-                role="button"
-                class="btn btn-primary1 btn-lg btn-block"
-                ><i> log in </i></a
-              >
+              <button class="btn btn-primary d-grid w-100" type="submit">log in</button>
 
               <div class="divider d-flex align-items-center my-4">
                 <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>

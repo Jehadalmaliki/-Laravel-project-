@@ -76,6 +76,9 @@ Route::group(
     });
 //client routing
 Route::get('/Course', [CourseController::class, 'show'])->name('Course');
+Route::post('/save_course', [CourseController::class, 'insert'])->name('save_course');
+
+
 
 Route::get('/Eduction', [EductionController::class, 'show'])->name('Eduction');
 Route::post('/save_eduction', [EductionController::class, 'insert'])->name('save_eduction');
@@ -85,6 +88,10 @@ Route::post('/save_experince', [ExperinceController::class, 'insert'])->name('sa
 
 Route::get('/User', [UserController::class, 'show'])->name('User');
 Route::post('/save_user',[UserController::class,'register'])->name('save_user');
+Route::get('/front/login',[UserController::class,'showLogin'])->name('login');
+Route::post('/do_login',[UserController::class,'login'])->name('do_login');
+Route::get('/dashboard',[UserController::class,'adminDash'])->name('dashboard');
+Route::get('/logout',[UserController::class,'logout'])->name('logout');
 
 Route::get('/Skill', [SkillController::class, 'show'])->name('Skill');
 Route::post('/save_skill',[SkillController::class,'insert'])->name('save_skill');
@@ -100,14 +107,15 @@ Route::post('/save_company',[companyController::class,'insert'])->name('save_com
 Route::get('adminaboutus', [aboutusController::class, 'show'])->name('adminaboutus');
 Route::post('/save_aboutus', [aboutusController::class, 'insert'])->name('save_aboutus');
 
-Route::get('adminaconnectus', [connectusController::class, 'show'])->name('adminaconnect');
+Route::get('/adminaconnectus', [connectusController::class, 'show'])->name('adminaconnect');
 Route::post('/save_connectus', [connectusController::class, 'insert'])->name('save');
 
 Route::get('adminaservice', [serviceController::class, 'show'])->name('adminaservice');
 Route::post('save_service', [serviceController::class, 'insert'])->name('save_service');
 
-Route::get('/a/adminJob', [jobController::class, 'show'])->name('Job');
+Route::get('adminJob', [jobController::class, 'show'])->name('Job');
 Route::post('/save_job', [jobController::class, 'insert'])->name('save_job');
+
 
 Route::get('/generate_role', [settingscontroller::class, 'generateRules'])->name('generate_role');
 
