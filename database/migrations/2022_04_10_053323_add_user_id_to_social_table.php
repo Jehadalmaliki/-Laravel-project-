@@ -13,16 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('social', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('Link');
-            $table->string('image')->default('person.png');
+        Schema::table('social', function (Blueprint $table) {
+            //
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
             ->references('id')->on('users')->onDelete('cascade');
-            $table->timestamps();
-
         });
     }
 
@@ -33,7 +28,9 @@ return new class extends Migration
      */
     public function down()
     {
-        //
-        Schema::dropIfExists('social');
+        Schema::table('social', function (Blueprint $table) {
+            //
+            $table->$table->dropColumn('user_id');
+        });
     }
 };
