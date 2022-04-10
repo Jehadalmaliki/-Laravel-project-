@@ -149,7 +149,7 @@
 
 
                         <div class="col-12">
-                            <label for="date" class="form-label">Graduation date</label>
+                            <label for="date" class="form-label"> date</label>
                             <input type="date" name="Date" class="form-control rounded-pill" id="date">
                         </div>
 

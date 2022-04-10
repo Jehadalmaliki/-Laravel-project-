@@ -76,6 +76,9 @@ Route::group(
     });
 //client routing
 Route::get('/Course', [CourseController::class, 'show'])->name('Course');
+Route::post('/save_course', [CourseController::class, 'insert'])->name('save_course');
+
+
 
 Route::get('/Eduction', [EductionController::class, 'show'])->name('Eduction');
 Route::post('/save_eduction', [EductionController::class, 'insert'])->name('save_eduction');
