@@ -87,7 +87,9 @@ Route::get('/User', [UserController::class, 'show'])->name('User');
 Route::post('/save_user',[UserController::class,'register'])->name('save_user');
 
 Route::get('/Skill', [SkillController::class, 'show'])->name('Skill');
+
 Route::get('/Social', [SocialController::class, 'show'])->name('Social');
+Route::post('/save_social',[SocialController::class,'insert'])->name('save_social');
 // admin routing
 
 //company Routing
