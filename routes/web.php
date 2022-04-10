@@ -76,7 +76,10 @@ Route::group(
     });
 //client routing
 Route::get('/Course', [CourseController::class, 'show'])->name('Course');
+
 Route::get('/Eduction', [EductionController::class, 'show'])->name('Eduction');
+Route::post('/save_eduction', [EductionController::class, 'insert'])->name('save_eduction');
+
 Route::get('/Experince', [ExperinceController::class, 'show'])->name('Experince');
 
 Route::get('/User', [UserController::class, 'show'])->name('User');
@@ -98,6 +101,9 @@ Route::post('/save_connectus', [connectusController::class, 'insert'])->name('sa
 
 Route::get('adminaservice', [serviceController::class, 'show'])->name('adminaservice');
 Route::post('save_service', [serviceController::class, 'insert'])->name('save_service');
+
+Route::get('/adminJob', [jobController::class, 'show'])->name('Job');
+Route::post('/save_job', [jobController::class, 'insert'])->name('save_job');
 
 Route::get('/generate_role', [settingscontroller::class, 'generateRules'])->name('generate_role');
 
