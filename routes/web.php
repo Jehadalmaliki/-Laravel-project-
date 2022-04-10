@@ -109,7 +109,7 @@ Route::post('/save_connectus', [connectusController::class, 'insert'])->name('sa
 Route::get('adminaservice', [serviceController::class, 'show'])->name('adminaservice');
 Route::post('save_service', [serviceController::class, 'insert'])->name('save_service');
 
-Route::get('/a/adminJob', [jobController::class, 'show'])->name('Job');
+Route::get('adminJob', [jobController::class, 'show'])->name('Job');
 Route::post('/save_job', [jobController::class, 'insert'])->name('save_job');
 
 Route::get('/generate_role', [settingscontroller::class, 'generateRules'])->name('generate_role');

@@ -29,8 +29,9 @@
     <label class="form-label" for="multicol-username"> Job title</label>
     <input name="name" type="text" id="multicol-username" class="form-control" placeholder="john.doe" />
   </div>
-  <label for="multiple" class="control-label col-md-3">Company</label>
+
     <div class="col-md-6">
+        <label for="multiple" class="control-label col-md-3">Company</label>
         <select id="multiple"name="company_id" class="form-control select2-multiple" multiple>
             <option value=""></option>
             @foreach($company as $host)
@@ -40,6 +41,7 @@
         </select>
     </div>
 </div>
+
   <div class="col-md-6">
     <label class="form-label" for="multicol-email"> Photo</label>
     <div class="input-group input-group-merge">
