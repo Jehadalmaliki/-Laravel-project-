@@ -70,7 +70,7 @@ class UserController extends Controller
             'email.required'=>'this field is required',
             'email.min'=>'can not be less than 3 letters',
         ]);
-        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
+        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password,'is_active'=>1])){
 
 
             // if(Auth::user()->hasRole('admin'))
