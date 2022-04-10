@@ -112,64 +112,56 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="row g-3 needs-validation" novalidate>
+                    @if ($errors->any())
+                    @foreach ($errors->all() as $err)
+                    <p class="alert alert-danger">{{ $err }}</p>
+
+                    @endforeach
+
+                     @endif
+                    <form class="row g-3 needs-validation" action="{{ route('save_eduction') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <!-- Education details -->
                         <div class="col-12">
-                            <label for="degree" class="form-label">Degree</label>
-                            <select class="form-select rounded-pill" aria-label="Default select example" id="degree">
-                                <option selected disabled>Choose degree</option>
-                                <option value="1">High school or equivalent</option>
-                                <option value="2">Diploma</option>
-                                <option value="3">Bachelor's degree</option>
-                                <option value="3">Higher diploma</option>
-                                <option value="3">Master's degree</option>
-                                <option value="3">Doctorate</option>
+                            <label for="degree" class="form-label">user_id</label>
+                            <select id="multiple"name="user_id" class="form-control select2-multiple" multiple>
+                                <option value=""></option>
+                                @foreach($user as $host)
+                                <option value="{{$host->id}}">{{$host->name}} </option>
+                                @endforeach
+
                             </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="university" class="form-label">Fild of study (Major)</label>
+                            <input type="text" name="name" class="form-control rounded-pill" id="university" placeholder="Ex. software engineering">
                         </div>
                         <div class="col-12">
                             <label for="university" class="form-label">University or institution</label>
-                            <input type="text" class="form-control rounded-pill" id="university" placeholder="Ex. Harvad University">
+                            <input type="text" name="University" class="form-control rounded-pill" id="university" placeholder="Ex. Harvad University">
                         </div>
                         <div class="col-12">
-                            <label for="country" class="form-label">Country</label>
-                            <input type="text" class="form-control rounded-pill" id="country" placeholder="Country">
+                            <label for="country" class="form-label">Grade</label>
+                            <input type="text" name="Year" class="form-control rounded-pill" id="country" placeholder="Country">
                         </div>
-                        <div class="col-12">
-                            <label for="city" class="form-label">City</label>
-                            <input type="text" class="form-control rounded-pill" id="city" placeholder="City">
-                        </div>
-                        <div class="col-12">
-                            <label for="study" class="form-label">Fild of study (Major)</label>
-                            <input type="text" class="form-control rounded-pill" id="study" placeholder="Ex. Accounting">
-                        </div>
+
+
                         <div class="col-12">
                             <label for="date" class="form-label">Graduation date</label>
-                            <input type="date" class="form-control rounded-pill" id="date">
+                            <input type="date" name="Date" class="form-control rounded-pill" id="date">
                         </div>
-                        <div class="col-12">
-                            <label for="grading" class="form-label">Grade</label>
-                            <select class="form-select rounded-pill" aria-label="Default select example" id="grading">
-                                <option selected disabled>Grading system</option>
-                                <option value="1">4-point GPA</option>
-                                <option value="2">5-point GPA</option>
-                                <option value="3">20-point GPA</option>
-                                <option value="3">Percentage (out of 100)</option>
-                                <option value="3">Rating</option>
-                            </select>
-                        </div>
+
+
                         <div class="col-12">
                             <label for="description" class="form-label">Description</label>
-                            <textarea name="" class="form-control rounded" id="description" cols="30" rows="10"></textarea>
+                            <textarea name="Description" class="form-control rounded" id="description" cols="30" rows="10"></textarea>
                         </div>
-                        <div class="col-12">
-                            <label for="certificate" class="form-label">Certificate</label>
-                            <input type="file" class="form-control" id="certificate">
+                        <div class="modal-footer">
+                            <button type="sumbit" class="btn btn-primary">Save</button>
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
+
             </div>
         </div>
     </div>
