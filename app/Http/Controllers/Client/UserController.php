@@ -48,7 +48,7 @@ class UserController extends Controller
         $u->email=$request->email;
 
         if($u->save()){
-            $u->attachRole('admin');
+            $u->attachRole('client');
             return redirect()->route('User')
             ->with(['success'=>'user created successful']);
         }
