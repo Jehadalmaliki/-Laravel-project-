@@ -99,7 +99,7 @@ class UserController extends Controller
         public function logout(){
 
             Auth::logout();
-            return redirect()->route('loginn');
+            return redirect()->route('login');
 
         }
 }
