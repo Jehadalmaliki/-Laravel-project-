@@ -8,8 +8,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
   />
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 
@@ -43,7 +43,7 @@
             <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse shadow ">
               <!-- image profile -->
               <div class=" col-12 d-flex justify-content-center align-items-center p-4 position-relative ">
-                <img src="image/face1.png" width="50%" class="img-fluid rounded-circle" alt="">
+                <img src="/image/face1.png" width="50%" class="img-fluid rounded-circle" alt="">
                 <a role="button" data-bs-toggle="modal" data-bs-target="#editImg" class="position-absolute bg-white
                     border border-primary rounded d-flex justify-content-center align-items-lg-center rounded-circle"
                     style="bottom: 10%;left: 35%; width: 30px;height: 30px;">
@@ -112,7 +112,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
   <!-- Github buttons -->
-  <script async defer src="js/buttons.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script async defer src="/js/buttons.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

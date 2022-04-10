@@ -12,8 +12,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/style.css" rel="stylesheet" />
   </head>
   <body>
     <nav
@@ -156,7 +156,7 @@
     <!-- Copyright -->
   </footer>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
 

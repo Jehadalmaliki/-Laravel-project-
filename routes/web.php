@@ -103,7 +103,7 @@ Route::post('/save_company',[companyController::class,'insert'])->name('save_com
 Route::get('adminaboutus', [aboutusController::class, 'show'])->name('adminaboutus');
 Route::post('/save_aboutus', [aboutusController::class, 'insert'])->name('save_aboutus');
 
-Route::get('adminaconnectus', [connectusController::class, 'show'])->name('adminaconnect');
+Route::get('/adminaconnectus', [connectusController::class, 'show'])->name('adminaconnect');
 Route::post('/save_connectus', [connectusController::class, 'insert'])->name('save');
 
 Route::get('adminaservice', [serviceController::class, 'show'])->name('adminaservice');
