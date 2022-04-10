@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class experince extends Model
 {
     use HasFactory;
-    protected $table = 'eduction';
+    protected $table = 'experince';
 	public $timestamps = true;
 	/**
 	 * The attributes that are mass assignable.

@@ -81,6 +81,7 @@ Route::get('/Eduction', [EductionController::class, 'show'])->name('Eduction');
 Route::post('/save_eduction', [EductionController::class, 'insert'])->name('save_eduction');
 
 Route::get('/Experince', [ExperinceController::class, 'show'])->name('Experince');
+Route::post('/save_experince', [ExperinceController::class, 'insert'])->name('save_experince');
 
 Route::get('/User', [UserController::class, 'show'])->name('User');
 Route::post('/save_user',[UserController::class,'register'])->name('save_user');
