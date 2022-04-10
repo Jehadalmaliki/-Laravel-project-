@@ -100,22 +100,40 @@
             <div class="modal-content p-3">
                 <div class="modal-header">
                     <h4 class="modal-title fw-bold text-center" id="exampleModalLabel">Add Skill</h4>
+                    @if ($errors->any())
+                @foreach ($errors->all() as $err)
+                <p class="alert alert-danger">{{ $err }}</p>
+
+                @endforeach
+
+                 @endif
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="row g-3 needs-validation" novalidate>
-                        <!-- Job details -->
+                    <form class="row g-3 needs-validation" action="{{ route('save_skill') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="col-12">
-                            <input type="text" class="form-control rounded-pill" id="skill" placeholder="Skill">
+                            <label for="degree" class="form-label">user_id</label>
+                            <select id="multiple"name="user_id" class="form-control select2-multiple" multiple>
+                                <option value=""></option>
+                                @foreach($user as $host)
+                                <option value="{{$host->id}}">{{$host->name}} </option>
+                                @endforeach
+
+                            </select>
                         </div>
                         <div class="col-12">
-                            <input type="range" class="form-range" id="customRange1">
+                            <input type="text"  name="name" value="{{ old('name') }}"class="form-control rounded-pill" id="skill" placeholder="Skill">
+                        </div>
+                        <div class="col-12">
+                            <input type="range"name="progrse" class="form-range" id="customRange1">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="sumbit" class="btn btn-primary">Save</button>
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
+
             </div>
         </div>
     </div>
