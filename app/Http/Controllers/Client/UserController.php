@@ -57,7 +57,18 @@ class UserController extends Controller
 
     }
     public function showLogin(){
-        return  view('Front.login');
+        if(Auth::check())
+        return redirect()->route($this->checkRole());
+        else
+        return view('Front.login');
+
+    }
+    public function checkRole(){
+        if(Auth::user()->hasRole('admin'))
+        return 'dashboard';
+            else
+            return 'Course';
+
     }
 
     public function login(Request $request){
@@ -76,7 +87,7 @@ class UserController extends Controller
             if(Auth::user()->hasRole('admin'))
             return redirect()->route('dashboard');
             else
-            return redirect()->route('/');
+            return redirect()->route('Course');
 
 
         }
