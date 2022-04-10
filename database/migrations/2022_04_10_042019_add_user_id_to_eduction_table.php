@@ -13,17 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('eduction', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('University');
-            $table->string('Description');
-            $table->date('Date');
-            $table->string('Year');
+        Schema::table('eduction', function (Blueprint $table) {
+            //
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
             ->references('id')->on('users')->onDelete('cascade');
-            $table->timestamps();
 
         });
     }
@@ -35,7 +29,9 @@ return new class extends Migration
      */
     public function down()
     {
-        //
-        Schema::dropIfExists('eduction');
+        Schema::table('eduction', function (Blueprint $table) {
+            //
+            $table->$table->dropColumn('user_id');
+        });
     }
 };
