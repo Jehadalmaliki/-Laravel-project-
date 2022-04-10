@@ -73,10 +73,10 @@ class UserController extends Controller
         if(Auth::attempt(['email'=>$request->email,'password'=>$request->password,'is_active'=>1])){
 
 
-            // if(Auth::user()->hasRole('admin'))
+            if(Auth::user()->hasRole('admin'))
             return redirect()->route('dashboard');
-            // else
-            // return redirect()->route('/');
+            else
+            return redirect()->route('/');
 
 
         }
