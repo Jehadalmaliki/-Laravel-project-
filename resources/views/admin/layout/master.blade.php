@@ -154,9 +154,22 @@
 
     <ul class="menu-inner py-1">
 
+{{-- dashboard --}}
 
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-user"></i>
+              <div data-i18n="  dashboard"> </div>
+            </a>
+            <ul class="menu-sub">
+            <li class="menu-item">
+                <a href="{{ route('dashboard') }}" class="menu-link">
+                  <div data-i18n="  view dashboard "> </div>
+                </a>
+              </li>
 
-
+            </ul>
+          </li>
 
 
       <!-- Forms & Tables -->
