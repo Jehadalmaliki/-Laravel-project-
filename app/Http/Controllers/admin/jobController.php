@@ -11,10 +11,52 @@ use DB;
 class jobController extends Controller
 {
     //
+    public function index(){
+        $job=job::orderBy('id','desc')->get();
+        return view('admin.Job.list_Job')
+        ->with('job',$job)
+        ;
+
+    }
+    public function edit($c_id){
+        $job=job::find($c_id);
+        $company=company::all();
+        return view('admin.Job.edit',['company'=>$company,'job'=>$job]);
+        ;
+
+    }
+    public function update(Request $request,$cat_id){
+        $u=job::find($cat_id);
+        $u->name=$request->name;
+        $u->description=$request->description;
+        $u->is_active=$request->is_active;
+        $u->caree_level=$request->caree_level;
+        $u->start_date=$request->start_date;
+        $u->expirt_date=$request->expirt_date;
+        $u->file=$request->file;
+        $u->sector=$request->sector;
+        $u->governement=$request->governement;
+        $u->responsblite=$request->responsblite;
+        $u->company_id=$request->company_id;
+        if($request->hasFile('image'))
+        $u->image=$this->uploadFile($request->file('image'));
+        if($u->save())
+        return redirect()->route('list_job')->with(['success'=>'data updated successful']);
+        return redirect()->back()->with(['error'=>'can not update data ']);
+    }
+    public function toggle($cat_id){
+
+        $c=job::find($cat_id);
+        $c->is_active*=-1;
+        if($c->save())
+        return back()->with(['success'=>'data updated successful']);
+        return back()->with(['error'=>'can not update data']);
+
+    }
     public function show()
     { //$company = DB::select('select * from company');
         $company=company::all();
-        return view('admin.Job',['company'=>$company]);
+        return view('admin.Job.Job',['company'=>$company]);
     }
     public function master()
     {
@@ -52,7 +94,7 @@ class jobController extends Controller
 
         $u=new job();
         $u->name=$request->name;
-        $u->image=$request->image;
+        $u->image=$request->hasFile('image')?$this->uploadFile($request->file('image')):"default_category.png";
         $u->description=$request->description;
         $u->caree_level=$request->caree_level;
         $u->start_date=$request->start_date;
@@ -62,10 +104,20 @@ class jobController extends Controller
         $u->governement=$request->governement;
         $u->responsblite=$request->responsblite;
         $u->company_id=$request->company_id;
+        $u->is_active=$request->is_active;
         if($u->save())
         return redirect()->route('User')
         ->with(['success'=>'user created successful']);
         return back()->with(['error'=>'can not create user']);
+
+    }
+    public function uploadFile($file){
+        $dest=public_path()."/images/";
+
+        //$file = $request->file('image');
+        $filename= time()."_".$file->getClientOriginalName();
+        $file->move($dest,$filename);
+        return $filename;
 
     }
 }

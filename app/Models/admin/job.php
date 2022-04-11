@@ -27,6 +27,9 @@ class job extends Model
    {
        return $this->belongsTo(company::class, 'foreign_key', 'company_id');
    }
-   
+   public function getImageAttribute($value){
+    return url("images/")."/".$value;
+
+}
 
 }

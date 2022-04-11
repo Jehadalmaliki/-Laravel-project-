@@ -200,10 +200,11 @@
         </a>
       </li>
       <li class="menu-item">
-        <a href="/" class="menu-link">
+        <a href="{{ route('list_job') }}" class="menu-link">
         <div data-i18n="Show JOb "> </div>
         </a>
       </li>
+
     </ul>
   </li>
  <!-- Company -->
