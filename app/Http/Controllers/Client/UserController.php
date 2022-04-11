@@ -51,7 +51,7 @@ class UserController extends Controller
 
         if($u->save()){
             $u->attachRole('client');
-            return redirect()->route('User')
+            return redirect()->route('login')
             ->with(['success'=>'user created successful']);
         }
 
