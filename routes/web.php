@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\Client\CourseController;
 use App\Http\Controllers\Client\EductionController;
 use App\Http\Controllers\Client\ExperinceController;
@@ -76,10 +77,19 @@ Route::group(
     });
 
     Route::group(['middleware'=>'auth'],function(){
-        Route::get('/dashboard',[UserController::class,'adminDash'])->name('dashboard');
+        Route::group(['middleware'=>'role:admin|super_admin'],function(){
+
+            Route::get('/dashboard',[UserController::class,'adminDash'])->name('dashboard');
+
+
+        });
+
         Route::get('/logout',[UserController::class,'logout'])->name('logout');
 
     });
+//Requesting The Password Reset Link
+Route::get('/change-password', [UserController::class, 'changePassword'])->name('change-password');
+Route::post('/change-password', [UserController::class, 'updatePassword'])->name('update-password');
 //client routing
 Route::get('/Course', [CourseController::class, 'show'])->name('Course');
 Route::post('/save_course', [CourseController::class, 'insert'])->name('save_course');
