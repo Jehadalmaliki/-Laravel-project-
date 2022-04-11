@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Contracts\Auth\CanResetPassword;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -48,7 +50,7 @@ class UserController extends Controller
         $u->email=$request->email;
 
         if($u->save()){
-            $u->attachRole('admin');
+            $u->attachRole('client');
             return redirect()->route('User')
             ->with(['success'=>'user created successful']);
         }
@@ -57,7 +59,18 @@ class UserController extends Controller
 
     }
     public function showLogin(){
-        return  view('Front.login');
+        if(Auth::check())//redirect user to dashboard if he change the router to login and he still in dashboard
+        return redirect()->route($this->checkRole());
+        else
+        return view('Front.login');
+
+    }
+    public function checkRole(){
+        if(Auth::user()->hasRole('admin'))
+        return 'dashboard';
+            else
+            return 'Course';
+
     }
 
     public function login(Request $request){
@@ -70,13 +83,13 @@ class UserController extends Controller
             'email.required'=>'this field is required',
             'email.min'=>'can not be less than 3 letters',
         ]);
-        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
+        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password,'is_active'=>1])){
 
 
-            // if(Auth::user()->hasRole('admin'))
+            if(Auth::user()->hasRole('admin'))//if he login and has admin role and he is active=1 redirct him to dashboard route
             return redirect()->route('dashboard');
-            // else
-            // return redirect()->route('/');
+            else
+            return redirect()->route('Course');
 
 
         }
@@ -102,4 +115,30 @@ class UserController extends Controller
             return redirect()->route('login');
 
         }
+        public function changePassword()
+        {
+          return view('Front.change-password');
+        }
+        public function updatePassword(Request $request)
+{
+        # Validation
+        $request->validate([
+            'old_password' => 'required',
+            'new_password' => 'required|confirmed',
+        ]);
+
+
+        #Match The Old Password
+        if(!Hash::check($request->old_password, auth()->user()->password)){
+            return back()->with("error", "Old Password Doesn't match!");
+        }
+
+
+        #Update the new Password
+        User::whereId(auth()->user()->id)->update([
+            'password' => Hash::make($request->new_password)
+        ]);
+
+        return back()->with("status", "Password changed successfully!");
+}
 }
