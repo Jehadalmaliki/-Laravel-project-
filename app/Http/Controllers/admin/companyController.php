@@ -38,10 +38,6 @@ class companyController extends Controller
 
         $c=company::find($cat_id);
         $c->is_active*=-1;
-        /*if($u->is_active==0)
-        $u->is_active=1;
-        else
-        $u->is_active=0;*/
         if($c->save())
         return back()->with(['success'=>'data updated successful']);
         return back()->with(['error'=>'can not update data']);
