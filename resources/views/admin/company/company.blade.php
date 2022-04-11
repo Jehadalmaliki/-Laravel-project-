@@ -43,17 +43,14 @@
   </div>
 
   <div class="col-md-6">
-    <div class="form-password-toggle">
-      <label class="form-label" for="multicol-confirm-password">تفعيل القسم</label>
-      <div class="input-group input-group-merge">
-      <label class="switch">
-          <input name="is_active" value=1 type="checkbox" checked class="switch-input" />
-          <span class="switch-toggle-slider">
-            <span class="switch-on"></span>
-            <span class="switch-off"></span>
-          </span>
-          <span class="switch-label">مفعل؟</span>
-        </label>
+    <div class="row">
+      <label class="col-sm-3 col-form-label text-sm-end" for="formtabs-country">is active</label>
+      <div class="col-sm-9">
+        <select  name="is_active" id="formtabs-country" class="select2 form-select" data-allow-clear="true">
+
+          <option value="1">مفعل</option>
+          <option value="-1">معطل</option>
+        </select>
       </div>
     </div>
   </div>
