@@ -10,6 +10,8 @@ use App\Http\Controllers\Client\ExperinceController;
 use App\Http\Controllers\Client\UserController;
 use App\Http\Controllers\Client\SkillController;
 use App\Http\Controllers\Client\SocialController;
+use App\Http\Controllers\admin\ForgotPasswordController;
+use App\Http\Controllers\admin\ResetPasswordController;
 
 use App\Http\Controllers\admin\jobController;
 use App\Http\Controllers\admin\companyController;
@@ -87,9 +89,14 @@ Route::group(
         Route::get('/logout',[UserController::class,'logout'])->name('logout');
 
     });
-//Requesting The Password Reset Link
+//change password
 Route::get('/change-password', [UserController::class, 'changePassword'])->name('change-password');
 Route::post('/change-password', [UserController::class, 'updatePassword'])->name('update-password');
+
+Route::get('/forget-password',  [ForgotPasswordController::class,'getEmail']);
+Route::post('/forget-password', [ForgotPasswordController::class,'postEmail'])->name('forget-password');
+Route::get('/reset-password/{token}', [ResetPasswordController::class,'getPassword']);
+Route::post('/reset-password', [ResetPasswordController::class,'updatePassword']);
 //client routing
 Route::get('/Course', [CourseController::class, 'show'])->name('Course');
 Route::post('/save_course', [CourseController::class, 'insert'])->name('save_course');
