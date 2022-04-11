@@ -27,4 +27,8 @@ class company extends Model
     {
         return $this->hasMany(job::class);
     }
+    public function getImageAttribute($value){
+        return url("images/")."/".$value;
+
+    }
 }

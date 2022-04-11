@@ -125,6 +125,11 @@ Route::post('/save_social',[SocialController::class,'insert'])->name('save_socia
 //company Routing
 Route::get('/admincompany', [companyController::class, 'show'])->name('admincompany');
 Route::post('/save_company',[companyController::class,'insert'])->name('save_company');
+Route::get('/list_company',[companyController::class,'index'])->name('list_company');
+Route::get('/edit_company/{cat_id}',[companyController::class,'edit'])->name('edit_company');
+Route::get('/toggle_company/{cat_id}',[companyController::class,'toggle'])->name('toggle_company');
+Route::post('/update_company/{cat_id}',[companyController::class,'update'])->name('update_company');
+
 
 Route::get('adminaboutus', [aboutusController::class, 'show'])->name('adminaboutus');
 Route::post('/save_aboutus', [aboutusController::class, 'insert'])->name('save_aboutus');
