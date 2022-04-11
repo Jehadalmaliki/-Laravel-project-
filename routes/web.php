@@ -139,10 +139,13 @@ Route::post('/save_connectus', [connectusController::class, 'insert'])->name('sa
 
 Route::get('adminaservice', [serviceController::class, 'show'])->name('adminaservice');
 Route::post('save_service', [serviceController::class, 'insert'])->name('save_service');
-
+// Routing Job
 Route::get('adminJob', [jobController::class, 'show'])->name('Job');
 Route::post('/save_job', [jobController::class, 'insert'])->name('save_job');
-
+Route::get('/list_job',[jobController::class,'index'])->name('list_job');
+Route::get('/edit_job/{cat_id}',[jobController::class,'edit'])->name('edit_job');
+Route::get('/toggle_job/{cat_id}',[jobController::class,'toggle'])->name('toggle_job');
+Route::post('/update_job/{cat_id}',[jobController::class,'update'])->name('update_job');
 
 Route::get('/generate_role', [settingscontroller::class, 'generateRules'])->name('generate_role');
 

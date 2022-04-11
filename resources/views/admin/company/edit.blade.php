@@ -33,7 +33,7 @@
             </div>
             <div class="col-md-6">
               <div class="row">
-                <label class="col-sm-3 col-form-label text-sm-end" for="formtabs-last-name"> الإسم الانجليزي</label>
+                <label class="col-sm-3 col-form-label text-sm-end" for="formtabs-last-name"> الوصف</label>
                 <div class="col-sm-9">
                   <input type="text" name="description" value="{{ $company->description }}" id="formtabs-last-name" class="form-control" value="{{ $company->name_ar }}" />
                 </div>
