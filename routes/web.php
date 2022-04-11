@@ -114,9 +114,15 @@ Route::post('/save_user',[UserController::class,'register'])->name('save_user');
 Route::get('/front/login',[UserController::class,'showLogin'])->name('login');
 Route::post('/do_login',[UserController::class,'login'])->name('do_login');
 
-
+//Skill Routing
 Route::get('/Skill', [SkillController::class, 'show'])->name('Skill');
 Route::post('/save_skill',[SkillController::class,'insert'])->name('save_skill');
+Route::get('/list_skill',[SkillController::class,'index'])->name('list_skill');
+Route::get('/edit_skill/{cat_id}',[SkillController::class,'edit'])->name('edit_skill');
+Route::get('/toggle_skill/{cat_id}',[SkillController::class,'toggle'])->name('toggle_skill');
+Route::post('/update_skill/{cat_id}',[SkillController::class,'update'])->name('update_skill');
+
+
 
 Route::get('/Social', [SocialController::class, 'show'])->name('Social');
 Route::post('/save_social',[SocialController::class,'insert'])->name('save_social');
