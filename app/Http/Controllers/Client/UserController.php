@@ -49,8 +49,9 @@ class UserController extends Controller
         $u->password=Hash::make($request->password);
         $u->email=$request->email;
 
+
         if($u->save()){
-            $u->attachRole('client');
+            $u->attachRole('admin');
             return redirect()->route('login')
             ->with(['success'=>'user created successful']);
         }
@@ -83,7 +84,7 @@ class UserController extends Controller
             'email.required'=>'this field is required',
             'email.min'=>'can not be less than 3 letters',
         ]);
-        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password,'is_active'=>1])){
+        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
 
 
             if(Auth::user()->hasRole('admin'))//if he login and has admin role and he is active=1 redirct him to dashboard route
@@ -117,7 +118,7 @@ class UserController extends Controller
         }
         public function changePassword()
         {
-          return view('Front.change-password');
+          return view('admin.change-password');
         }
         public function updatePassword(Request $request)
 {
