@@ -668,7 +668,7 @@
                       </div>
                     </div>
                     <div class="flex-grow-1">
-                      <span class="fw-semibold d-block">John Doe</span>
+                      <span class="fw-semibold d-block">{{auth()->user()->name }}</span>
                       <small class="text-muted">Admin</small>
                     </div>
                   </div>
@@ -787,7 +787,7 @@
           </div>
           <div class="col-12 col-md-6">
             <label class="form-label" for="modalAddCardName">Name</label>
-            <input type="text" id="modalAddCardName" class="form-control" placeholder="John Doe" />
+            <input type="text" id="modalAddCardName" class="form-control" placeholder=".." />
           </div>
           <div class="col-6 col-md-3">
             <label class="form-label" for="modalAddCardExpiryDate">Exp. Date</label>
