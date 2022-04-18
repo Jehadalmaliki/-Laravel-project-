@@ -41,9 +41,7 @@ Route::get('/master', function () {
 Route::get('/profile', function () {
     return view('Front/profile');
 });
-Route::get('/login', function () {
-    return view('Front/login');
-});
+
 Route::get('/listJob', function () {
     return view('Front/listJob');
 });
@@ -82,6 +80,8 @@ Route::group(
         Route::group(['middleware'=>'role:admin|super_admin'],function(){
 
             Route::get('/dashboard',[UserController::class,'adminDash'])->name('dashboard');
+            Route::get('/change-password', [UserController::class, 'changePassword'])->name('change-password');
+            Route::post('/change-password', [UserController::class, 'updatePassword'])->name('update-password');
 
 
         });
@@ -90,8 +90,6 @@ Route::group(
 
     });
 //change password
-Route::get('/change-password', [UserController::class, 'changePassword'])->name('change-password');
-Route::post('/change-password', [UserController::class, 'updatePassword'])->name('update-password');
 
 Route::get('/forget-password',  [ForgotPasswordController::class,'getEmail']);
 Route::post('/forget-password', [ForgotPasswordController::class,'postEmail'])->name('forget-password');

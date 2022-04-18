@@ -714,9 +714,9 @@
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="pages-pricing.html">
+                <a class="dropdown-item" href="{{ route('change-password') }}">
                   <i class="bx bx-dollar me-2"></i>
-                  <span class="align-middle">Pricing</span>
+                  <span class="align-middle">change password</span>
                 </a>
               </li>
               <li>

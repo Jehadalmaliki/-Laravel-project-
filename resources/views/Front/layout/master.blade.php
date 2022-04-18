@@ -62,7 +62,7 @@
                 <a class="nav-link text-light" href="/serveric">عربي</a>
               </li>
             <li class="nav-item">
-              <a href="/login"><button type="button" class="btn btn-outline-warning">
+              <a href="{{ route('login') }}"><button type="button" class="btn btn-outline-warning">
                 log in
               </button></a>
             </li>
