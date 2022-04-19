@@ -1,5 +1,4 @@
-@extends('Front.layout.master')
-@section('content')
+
 
 <div class="container">
      <div class="row justify-content-center">
@@ -13,10 +12,10 @@
                         </div>
                     @endif
                     <a
-                    href="http://customlaravelauth.co/{{$token}}/reset-password">Click Here</a>.
+                    href="http://127.0.0.1:8000/reset-password/{{$token}}">Click Here</a>.
                 </div>
             </div>
         </div>
     </div>
 </div>
-@endsection
+
