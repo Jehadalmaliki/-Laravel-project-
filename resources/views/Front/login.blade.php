@@ -64,7 +64,7 @@
                     Remember me
                   </label>
                 </div>
-                <a href="#!">Forgot password?</a>
+                <a href="/forget-password">Forgot password?</a>
               </div>
 
               <!-- Submit button -->

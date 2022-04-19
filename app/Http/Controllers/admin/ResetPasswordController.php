@@ -7,13 +7,13 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use App\User;
+use App\Models\User;
 
 class ResetPasswordController extends Controller {
 
   public function getPassword($token) {
 
-     return view('customauth.passwords.reset', ['token' => $token]);
+     return view('Front.reset', ['token' => $token]);
   }
 
   public function updatePassword(Request $request)
@@ -36,7 +36,7 @@ class ResetPasswordController extends Controller {
 
         DB::table('password_resets')->where(['email'=> $request->email])->delete();
 
-        return redirect('/login')->with('message', 'Your password has been changed!');
+        return redirect('login')->with('message', 'Your password has been changed!');
 
       }
     }
