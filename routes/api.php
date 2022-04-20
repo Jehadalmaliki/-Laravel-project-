@@ -13,7 +13,17 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::group(['middleware'=>'maintinance_mode'] ,function(){
+    Route::get('show_data', function(){
+        return "inside index";
+    });
+    Route::get('item', function(){
+        return "inside product";
+    });
+});
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+

@@ -16,6 +16,8 @@ class Maintinance
      */
     public function handle(Request $request, Closure $next)
     {
+        if (env('MAINTINANACE')=='on')
+        return view('Client.Social');
         return $next($request);
     }
 }
