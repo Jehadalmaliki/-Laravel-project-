@@ -70,7 +70,7 @@ class companyController extends Controller
         $u->description=$request->description;
         $u->is_active=$request->is_active;
         if($u->save())
-        return redirect()->route('User')
+        return redirect()->route('list_company')
         ->with(['success'=>'company created successful']);
         return back()->with(['error'=>'can not create company']);
 
