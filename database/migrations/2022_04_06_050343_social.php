@@ -19,8 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('Link');
             $table->string('image')->default('person.png');
-            $table->foreign('user_id')
-            ->references('id')->on('users')->onDelete('cascade');
+            
             $table->timestamps();
 
         });
