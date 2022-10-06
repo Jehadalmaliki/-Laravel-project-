@@ -128,7 +128,7 @@ Route::get('/toggle_skill/{cat_id}',[SkillController::class,'toggle'])->name('to
 Route::post('/update_skill/{cat_id}',[SkillController::class,'update'])->name('update_skill');
 
 
-
+// Social Routing
 Route::get('/Social', [SocialController::class, 'show'])->name('Social');
 Route::post('/save_social',[SocialController::class,'insert'])->name('save_social');
 // admin routing
